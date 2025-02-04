@@ -23,7 +23,7 @@ renderer.render(scene, camera);
 
 // Torus
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshBasicMaterial({ color: 0xff6347, wireframe: true });
+const material = new THREE.MeshBasicMaterial({ color: 0xff6347, wireframe: true});
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
@@ -103,13 +103,13 @@ scene.add(torus);
 function animate() {
   requestAnimationFrame(animate);
 
-//   torus.rotation.x += 0.01;
-//   torus.rotation.y += 0.005;
-//   torus.rotation.z += 0.01;
+  // torus.rotation.x += 0.01;
+  // torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
 
 //   moon.rotation.x += 0.005;
 
-//   controls.update();  // ✅ Ensure camera updates
+//   controls.update();  // 
 
   renderer.render(scene, camera);
 }
@@ -117,8 +117,8 @@ function animate() {
 animate();
 
 // Resize Handling
-// window.addEventListener('resize', () => {
-//   renderer.setSize(window.innerWidth, window.innerHeight);
-//   camera.aspect = window.innerWidth / window.innerHeight;
-//   camera.updateProjectionMatrix();
-// });
+window.addEventListener('resize', () => {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+});
