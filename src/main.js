@@ -56,8 +56,8 @@ const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spaceTexture;
 
 // Avatar
-const jeffTexture = new THREE.TextureLoader().load('jeff.png');
-const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: jeffTexture }));
+const jeffTexture = new THREE.TextureLoader().load();
+const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3, 100), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 scene.add(jeff);
 
 // Moon
