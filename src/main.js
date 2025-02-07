@@ -22,7 +22,7 @@ camera.position.setZ(30);
 renderer.render(scene, camera);
 
 // Torus
-const geometry = new THREE.TorusGeometry(5, 3, 2, 100,3);
+const geometry = new THREE.TorusGeometry(10,3,16,100);
 const material = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: true});
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
@@ -89,7 +89,7 @@ function moveCamera() {
 }
 
 let ticking = false;
-document.body.onscroll = () => {
+document.body.onscroll = () => {  
   if (!ticking) {
     requestAnimationFrame(() => {
       moveCamera();
