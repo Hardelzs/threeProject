@@ -3,8 +3,6 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Setup Scene
-
-
 // Grid Helper & Axes Helper for better 3D perspective
 const gridHelper = new THREE.GridHelper(200, 50);
 scene.add(gridHelper);
